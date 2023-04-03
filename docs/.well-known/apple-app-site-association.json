@@ -1,0 +1,20 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "64RE4NGNUN.kr.co.greatbooks.grBooks",
+                "paths": [
+                    "/link",
+                    "/link/index.html",
+                    "/link/*",
+                    "/share",
+                    "/share/*",
+                    "/api/link",
+                    "/api/link/index.html",
+                    "/api/link/*"
+                ]
+            }
+        ]
+    }
+}

@@ -80,21 +80,17 @@ var LinkActor = {
     },
 
     IosAction: function(typeAfter) {
-        //const redirectTo = instance.ios_appUrl.replace( instance.holder, instance.getParam(""));
-        alert("iOS #1" + redirectTo);
-        //window.location.href = redirectTo;
-
-        // setTimeout(function() {
-        //     var iframe = document.createElement('iframe');
-        //     iframe.style.visibility = 'hidden';
-        //     iframe.src = instance.ios_marketUrl;
-        //     document.body.appendChild(iframe);
-        //     document.body.removeChild(iframe);
-        // }, 500);
-
-        const redirectTo = instance.ios_marketUrl.replace( instance.holder, instance.getParam(""));
+        const redirectTo = instance.ios_appUrl.replace( instance.holder, instance.getParam(""));
+        //alert("iOS #1" + redirectTo);
         window.location.href = redirectTo;
 
+        setTimeout(function() {
+            var iframe = document.createElement('iframe');
+            iframe.style.visibility = 'hidden';
+            iframe.src = instance.ios_marketUrl;
+            document.body.appendChild(iframe);
+            document.body.removeChild(iframe);
+        }, 500);
     },
 
     getParam: function(sname) { 
