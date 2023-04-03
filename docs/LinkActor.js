@@ -88,13 +88,16 @@ var LinkActor = {
 
         const elem = document.getElementById("deeplink");
         var a = document.createElement('a');
+        a.setAttribute("id", "goAction");
         a.setAttribute('href', redirectTo);
         a.setAttribute('target', _blank);
         elem.appendChild(a);
         a.click();
 
         setTimeout(function() {
-            a.click();
+            const link = document.getElementById('goAction');
+            link.addEventListener('click', e => {});
+            link.dispatchEvent(new Event('click'));
         }, 500);
     },
 
