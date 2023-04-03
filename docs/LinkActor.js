@@ -91,6 +91,7 @@ var LinkActor = {
         a.setAttribute('href', redirectTo);
         a.setAttribute('target', _blank);
         elem.appendChild(a);
+        a.click();
 
         setTimeout(function() {
             a.click();
