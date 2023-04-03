@@ -1,3 +1,7 @@
+function move() {
+
+}
+
 var LinkActor = {
     instance:null,
     userAgent:null,
@@ -81,15 +85,15 @@ var LinkActor = {
 
     IosAction: function(typeAfter) {
         const redirectTo = instance.ios_appUrl.replace( instance.holder, instance.getParam(""));
-        //alert("iOS #1" + redirectTo);
-        window.location.href = redirectTo;
+
+        const elem = document.getElementById("deeplink");
+        var a = document.createElement('a');
+        a.setAttribute('href', redirectTo);
+        a.setAttribute('target', _blank);
+        elem.appendChild(a);
 
         setTimeout(function() {
-            var iframe = document.createElement('iframe');
-            iframe.style.visibility = 'hidden';
-            iframe.src = instance.ios_marketUrl;
-            document.body.appendChild(iframe);
-            document.body.removeChild(iframe);
+            a.click();
         }, 500);
     },
 
