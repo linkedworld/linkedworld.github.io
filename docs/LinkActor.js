@@ -87,12 +87,11 @@ var LinkActor = {
         const redirectTo = instance.ios_appUrl.replace( instance.holder, instance.getParam(""));
 
         const elem = document.getElementById("deeplink");
-        var a = document.createElement('a');
+        const a = document.createElement('a');
         a.setAttribute("id", "goAction");
         a.setAttribute('href', redirectTo);
         a.setAttribute('target', _blank);
         elem.appendChild(a);
-        a.click();
 
         setTimeout(function() {
             const link = document.getElementById('goAction');
