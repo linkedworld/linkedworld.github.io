@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>링크드월드</title>
-    <script type="module" crossorigin src="/assets/index-a9397ef8.js"></script>
-    <link rel="stylesheet" href="/assets/index-b3b014ac.css">
-  </head>
-  <body>
-    <div id="app"></div>
-    
-  </body>
+<html><head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>그레이트북스 앱 다운로드</title>
+	<link rel="icon" type="image/png" href="favicon.ico"/>
+    <meta HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
+    <meta HTTP-EQUIV="Expires" CONTENT="-1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+ 
+	<script src="./libs/jquery-3.1.1.min.js"></script>
+	<script src="./LinkActor.js"></script>
+</head>
+<body>
+	<a href="https://cms.greatbooks.co.kr/api/link/index.html?activity=contentPlay&contentType=content&code=C0000001582&streamURL=https://greatbooks.xst.kinxcdn.com/greatbooks/_definst_/mp3:2022/04/20230106a2e0b8404d9c434.mp3/playlist.m3u8&timestamp=1680436066.4843557">앱에서 보기</a>
+
+	<script>
+		let actor = null;
+		$(document).ready(function() {
+			actor = LinkActor.init();
+			actor.PageAction("");
+		});
+	</script>
+</body>
 </html>
